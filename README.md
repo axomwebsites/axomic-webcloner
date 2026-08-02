@@ -1,4 +1,4 @@
-axom webcloner is a free& open sourced website that can RIP a website (logs it's requests, external requests, assests, gets frontend files (html, css, js), scans for malicious scripts) 
+axom webcloner is a free & open sourced website that can RIP a website (logs it's requests, external requests, assests, gets frontend files (html, css, js), scans for malicious scripts) 
 
 - Link (Best Option!)
 - By Image (Mid/Simple)
@@ -10,4 +10,4 @@ just use open sourced website for open mind
 
 And again, this was created by Axom. 
 
-# [Our Discord](https://discord.gg/QAhCXgaDZg) 
+# [Our Discord](https://discord.gg/Sps39CydcZ) 
