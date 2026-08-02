@@ -58,30 +58,45 @@
       </div>
       <div class="advancedoptions" id="advancedoptions" style="display:none;">
         <h4>advanced settings</h4>
-        <label>proxy url (optional)</label>
-        <input type="text" id="proxyinput" placeholder="https://corsproxy.io/?">
-        <label>custom headers (json)</label>
-        <textarea id="headersinput" rows="2" placeholder='{"User-Agent": "Mozilla/5.0"}'></textarea>
-        <label>cookie jar (json)</label>
-        <textarea id="cookiesinput" rows="2" placeholder='{"name":"value"}'></textarea>
-        <hr>
-        <label><input type="checkbox" id="stealthmode" checked> stealth mode (rotate ua, headers, delays)</label>
-        <label><input type="checkbox" id="delaymode" checked> enable random delays</label>
-        <div style="display:flex; gap:1rem; flex-wrap:wrap;">
-          <label>min delay (ms) <input type="number" id="mindelay" value="200" style="width:80px;"></label>
-          <label>max delay (ms) <input type="number" id="maxdelay" value="800" style="width:80px;"></label>
+        <div class="settingrow">
+          <label>proxy url</label>
+          <input type="text" id="proxyinput" placeholder="https://corsproxy.io/?">
         </div>
-        <label>retry count <input type="number" id="retrycount" value="3" style="width:60px;"></label>
-        <label>user‑agent rotation <input type="checkbox" id="rotateua" checked></label>
-        <label>proxies</label>
-        <select id="proxyselect">
-          <option value="all">all (fallback)</option>
-          <option value="allorigins">allorigins.win</option>
-          <option value="corsproxy">corsproxy.io</option>
-          <option value="codetabs">codetabs</option>
-          <option value="thingproxy">thingproxy</option>
-          <option value="corsanywhere">corsanywhere</option>
-        </select>
+        <div class="settingrow">
+          <label>custom headers (json)</label>
+          <textarea id="headersinput" rows="2" placeholder='{"User-Agent": "Mozilla/5.0"}'></textarea>
+        </div>
+        <div class="settingrow">
+          <label>cookie jar (json)</label>
+          <textarea id="cookiesinput" rows="2" placeholder='{"name":"value"}'></textarea>
+        </div>
+        <hr>
+        <div class="settingrow checkboxrow">
+          <label><input type="checkbox" id="stealthmode" checked> stealth mode</label>
+          <label><input type="checkbox" id="delaymode" checked> random delays</label>
+          <label><input type="checkbox" id="rotateua" checked> rotate user‑agent</label>
+        </div>
+        <div class="settingrow">
+          <label>min delay (ms)</label>
+          <input type="number" id="mindelay" value="200" step="50">
+          <label>max delay (ms)</label>
+          <input type="number" id="maxdelay" value="800" step="50">
+        </div>
+        <div class="settingrow">
+          <label>retry count</label>
+          <input type="number" id="retrycount" value="3" min="1" max="10">
+        </div>
+        <div class="settingrow">
+          <label>proxy selection</label>
+          <select id="proxyselect">
+            <option value="all">all (fallback)</option>
+            <option value="allorigins">allorigins.win</option>
+            <option value="corsproxy">corsproxy.io</option>
+            <option value="codetabs">codetabs</option>
+            <option value="thingproxy">thingproxy</option>
+            <option value="corsanywhere">corsanywhere</option>
+          </select>
+        </div>
         <button id="saveadvancedbtn" class="actionbutton smallbtn">save settings</button>
       </div>
       <div class="actionrow">
