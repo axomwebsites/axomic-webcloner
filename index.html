@@ -31,7 +31,7 @@
   <div class="mainrow">
     <div class="panel left">
       <div class="moderow">
-        <button id="linkmodebtn" class="modebutton active">clone by link</button>
+        <button id="linkmodebtn" class="modebutton active">FULL RIPPER</button>
         <button id="imagemodebtn" class="modebutton">clone by image</button>
       </div>
       <div class="rippermode">
@@ -64,6 +64,24 @@
         <textarea id="headersinput" rows="2" placeholder='{"User-Agent": "Mozilla/5.0"}'></textarea>
         <label>cookie jar (json)</label>
         <textarea id="cookiesinput" rows="2" placeholder='{"name":"value"}'></textarea>
+        <hr>
+        <label><input type="checkbox" id="stealthmode" checked> stealth mode (rotate ua, headers, delays)</label>
+        <label><input type="checkbox" id="delaymode" checked> enable random delays</label>
+        <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+          <label>min delay (ms) <input type="number" id="mindelay" value="200" style="width:80px;"></label>
+          <label>max delay (ms) <input type="number" id="maxdelay" value="800" style="width:80px;"></label>
+        </div>
+        <label>retry count <input type="number" id="retrycount" value="3" style="width:60px;"></label>
+        <label>user‑agent rotation <input type="checkbox" id="rotateua" checked></label>
+        <label>proxies</label>
+        <select id="proxyselect">
+          <option value="all">all (fallback)</option>
+          <option value="allorigins">allorigins.win</option>
+          <option value="corsproxy">corsproxy.io</option>
+          <option value="codetabs">codetabs</option>
+          <option value="thingproxy">thingproxy</option>
+          <option value="corsanywhere">corsanywhere</option>
+        </select>
         <button id="saveadvancedbtn" class="actionbutton smallbtn">save settings</button>
       </div>
       <div class="actionrow">
@@ -100,7 +118,6 @@
         <button id="copyoutputbtn" class="actionbutton">copy html</button>
         <button id="exportbtn" class="actionbutton">export</button>
         <button id="previewoutputbtn" class="actionbutton">open</button>
-        <button id="deploybtn" class="actionbutton">deploy</button>
       </div>
     </div>
   </div>
@@ -113,8 +130,8 @@
       <button id="closemodalbtn" class="closebtn">✕</button>
     </div>
     <div class="modalbody">
-      <label><input type="radio" name="exportopt" value="html" checked> download html</label>
-      <label><input type="radio" name="exportopt" value="zip"> download zip (with assets)</label>
+      <label><input type="radio" name="exportopt" value="html" checked> download as .html</label>
+      <label><input type="radio" name="exportopt" value="txt"> download as .txt</label>
       <label><input type="radio" name="exportopt" value="copy"> copy to clipboard</label>
     </div>
     <div class="modalfooter">
